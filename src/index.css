@@ -2,12 +2,12 @@
   /* Primary Colors */
   --color-purple-600: hsl(246, 80%, 60%);
 
-  --color-orange-300: hsl(15, 100%, 70%);    /* work */
-  --color-blue-300: hsl(195, 74%, 62%);      /* play */
-  --color-pink-400: hsl(348, 100%, 68%);     /* study */
-  --color-green-400: hsl(145, 58%, 55%);     /* exercise */
-  --color-purple-700: hsl(264, 64%, 52%);    /* social */
-  --color-yellow-300: hsl(43, 84%, 65%);     /* self care */
+  --color-orange-300: hsl(15, 100%, 70%); /* work */
+  --color-blue-300: hsl(195, 74%, 62%); /* play */
+  --color-pink-400: hsl(348, 100%, 68%); /* study */
+  --color-green-400: hsl(145, 58%, 55%); /* exercise */
+  --color-purple-700: hsl(264, 64%, 52%); /* social */
+  --color-yellow-300: hsl(43, 84%, 65%); /* self care */
 
   /* Neutral Colors */
   --color-navy-950: hsl(226, 43%, 10%);
@@ -50,6 +50,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: var(--color-navy-950);
+  color: var(--color-navy-200);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -93,3 +95,86 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* Main Card mobile Styles */
+
+.user-card-container {
+  width: 350px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.user-card {
+  background-color: var(--color-purple-600);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.user-card-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin-right: 20px;
+}
+
+.user-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.user-card-info p {
+  margin: 0;
+}
+
+.user-card-info p:first-child {
+  font-size: 0.8rem;
+  color: var(--color-navy-200);
+  margin-bottom: 5px;
+}
+
+.user-card-info p:last-child {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.user-card-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-navy-900);
+  margin-top: -10px; /* to merge both div */
+  z-index: 0;
+  position: relative;
+}
+
+.link {
+  padding: 10px 20px;
+  background-color: var(--color-navy-900);
+  color: var(--color-navy-200);
+  font-weight: 300;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.active {
+  color: #ffffff;
+}
+
+
+
