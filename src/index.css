@@ -223,7 +223,7 @@ span::first-letter {
   width: 350px;
   background-color: var(--color-navy-900);
   border-radius: 16px;
-overflow: hidden;
+  overflow: hidden;
   position: relative;
 }
 
@@ -296,4 +296,20 @@ overflow: hidden;
   color: #ffffff;
 }
 
+@media (min-width: 768px) {
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .user-card-container {
+    margin: auto;
+    width: 400px
+  }
+
+  .time-tracking-card-container {
+  }
+}
 
