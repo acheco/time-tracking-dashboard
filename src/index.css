@@ -108,8 +108,11 @@ main {
 }
 
 .user-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   width: 350px;
-  margin: auto;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -152,8 +155,9 @@ main {
   margin-bottom: 5px;
 }
 
-.user-card-info p:last-child {
-  font-size: 1.5rem;
+.username {
+  font-size: 2rem;
+  font-weight: 300;
   color: #ffffff;
   margin-bottom: 0;
 }
@@ -188,12 +192,11 @@ span::first-letter {
   text-transform: capitalize
 }
 
-
 .active {
   color: #ffffff;
 }
 
-/* card top background color */
+/* Tracking cards top background color */
 
 .orange {
   background-color: var(--color-orange-300);
@@ -217,6 +220,13 @@ span::first-letter {
 
 .yellow {
   background-color: var(--color-yellow-300);
+}
+
+.tracking-cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .time-tracking-card-container {
@@ -243,9 +253,8 @@ span::first-letter {
 
 .tracking-card-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   position: relative;
   z-index: 100;
   background-color: var(--color-navy-900);
@@ -263,32 +272,30 @@ span::first-letter {
   cursor: pointer;
 }
 
-.current-time p:first-child {
-  font-size: 18px;
+.tracking-card-info-header, .tracking-card-info-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tracking-card-info-header p {
+  margin: 0;
+  color: #ffffff;
   font-weight: 500;
 }
 
-.current-time p:last-child {
-  font-size: 30px;
+.tracking-card-info-body p {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
   font-weight: 300;
 }
 
-.previous-time {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: end;
-  padding: 10px 20px;
-}
-
-.previous-time span {
+.tracking-card-info-body span {
   margin: 0;
   font-size: 14px;
   color: var(--color-navy-200);
-}
-
-.more-options-icon {
-  margin-bottom: 1rem;
 }
 
 .more-options-icon:hover {
@@ -297,19 +304,75 @@ span::first-letter {
 }
 
 @media (min-width: 768px) {
-
-  main {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .user-card-container {
     margin: auto;
     width: 400px
   }
 
-  .time-tracking-card-container {
+  .tracking-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+
 }
 
+@media (min-width: 1024px) {
+
+  body {
+    margin: auto;
+    display: grid;
+    align-items: center;
+  }
+
+  main {
+    max-width: 900px;
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto;
+    gap: 0;
+  }
+
+  .user-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 48px;
+  }
+
+  .user-card-image {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+
+  .link {
+    align-items: flex-start;
+    padding: 5px 0;
+  }
+
+  .user-card-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time-tracking-card-container {
+    width: 200px;
+  }
+
+  .tracking-card-info-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tracking-card-info-body p {
+    font-size: 2.5rem;
+  }
+
+  .tracking-card-info-body span {
+    font-size: 0.7rem;
+  }
+
+
+
+}

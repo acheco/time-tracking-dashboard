@@ -29,20 +29,21 @@ function App() {
         }
       </UserCard>
 
-      {
-        data.map((item) => {
-          return (
-            <TimeTrackingCard
-              title={item.title}
-              icon={item.icon}
-              color={item.color}
-              timeframes={item.timeframes[active]}
-              active={active}
-              key={item.title}/>
-          )
-        })
-      }
-
+      <div className="tracking-cards-container">
+        {
+          data.map((item) => {
+            return (
+              <TimeTrackingCard
+                title={item.title}
+                icon={item.icon}
+                color={item.color}
+                timeframes={item.timeframes[active]}
+                active={active}
+                key={item.title}/>
+            )
+          })
+        }
+      </div>
     </main>
   )
 }

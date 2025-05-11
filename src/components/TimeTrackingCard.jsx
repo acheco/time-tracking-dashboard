@@ -14,13 +14,13 @@ export default function TimeTrackingCard({title, icon, active, timeframes, color
         <img src={icon} alt="Work icon"/>
       </div>
       <div className="tracking-card-info">
-        <div className="current-time">
+        <div className="tracking-card-info-header">
           <p>{title}</p>
-          <p>{current}hrs</p>
+          <img src="/icon-ellipsis.svg" alt="more options icon" className="more-options-icon"/>
         </div>
 
-        <div className="previous-time">
-          <img src="/icon-ellipsis.svg" alt="more options icon" className="more-options-icon"/>
+        <div className="tracking-card-info-body">
+          <p>{current}hrs</p>
           <span>{previousLabel[active]} - {previous}hrs</span>
         </div>
       </div>

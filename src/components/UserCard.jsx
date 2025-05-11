@@ -5,7 +5,7 @@ export default function UserCard({children}) {
         <img src="/image-jeremy.png" alt="The image of the user" className="user-card-image"/>
         <div className="user-card-info">
           <p>Report for</p>
-          <p>Jeremy Robson</p>
+          <p className="username">Jeremy Robson</p>
         </div>
 
       </div>
