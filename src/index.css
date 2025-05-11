@@ -98,6 +98,15 @@ textarea:not([rows]) {
 
 /* Main Card mobile Styles */
 
+main {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .user-card-container {
   width: 350px;
   margin: auto;
@@ -157,7 +166,7 @@ textarea:not([rows]) {
   width: 100%;
   padding: 20px;
   background-color: var(--color-navy-900);
-  margin-top: -10px; /* to merge both div */
+  margin-top: -10px;
   z-index: 0;
   position: relative;
 }
@@ -169,12 +178,122 @@ textarea:not([rows]) {
   font-weight: 300;
   font-size: 1rem;
   cursor: pointer;
-
 }
+
+.link:hover {
+  color: #ffffff;
+}
+
+span::first-letter {
+  text-transform: capitalize
+}
+
 
 .active {
   color: #ffffff;
 }
 
+/* card top background color */
+
+.orange {
+  background-color: var(--color-orange-300);
+}
+
+.blue {
+  background-color: var(--color-blue-300);
+}
+
+.pink {
+  background-color: var(--color-pink-400);
+}
+
+.green {
+  background-color: var(--color-green-400);
+}
+
+.purple {
+  background-color: var(--color-purple-700);
+}
+
+.yellow {
+  background-color: var(--color-yellow-300);
+}
+
+.time-tracking-card-container {
+  width: 350px;
+  background-color: var(--color-navy-900);
+  border-radius: 16px;
+overflow: hidden;
+  position: relative;
+}
+
+.tracking-card-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: relative;
+  margin-bottom: -20px;
+  max-height: 55px;
+  z-index: 0;
+}
+
+.tracking-card-icon img {
+  object-fit: cover;
+}
+
+.tracking-card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  background-color: var(--color-navy-900);
+  border-radius: 16px;
+  padding: 30px 20px;
+}
+
+.tracking-card-info p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.tracking-card-info:hover {
+  background-color: var(--color-purple-500);
+  cursor: pointer;
+}
+
+.current-time p:first-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.current-time p:last-child {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.previous-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 10px 20px;
+}
+
+.previous-time span {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-navy-200);
+}
+
+.more-options-icon {
+  margin-bottom: 1rem;
+}
+
+.more-options-icon:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
 
 
